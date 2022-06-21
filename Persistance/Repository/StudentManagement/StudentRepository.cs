@@ -27,9 +27,10 @@ namespace Persistance.Repository.StudentManagement
             _userManager = userManager;
         }
 
-
+        
         public IEnumerable<StudentModel> GetAllStudent()
         {
+            //int x = 10;
             return RepoContext.Students.ToList();
         }
 
