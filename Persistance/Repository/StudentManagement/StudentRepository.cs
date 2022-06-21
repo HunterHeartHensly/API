@@ -31,6 +31,15 @@ namespace Persistance.Repository.StudentManagement
         public IEnumerable<StudentModel> GetAllStudent()
         {
             //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
+
             return RepoContext.Students.ToList();
         }
 
