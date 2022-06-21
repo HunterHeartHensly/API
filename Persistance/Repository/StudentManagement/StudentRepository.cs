@@ -45,11 +45,29 @@ namespace Persistance.Repository.StudentManagement
 
         public StudentModel GetStudentById(string id)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             return RepoContext.Students.SingleOrDefault(x => x.Id == id);
         }
 
         public void EditStudent(string id, EditStudentDto editStudentDto)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             var result = this.GetStudentById(id);
 
             if (result != null)
@@ -61,12 +79,15 @@ namespace Persistance.Repository.StudentManagement
 
         public IEnumerable<StudentModel> GetSpecificStudent(string id) 
         {
-            // return RepoContext.Students.SingleOrDefault(x => x.Id == id);
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
 
-            // return RepoContext.Students
-            //.Include(dep => dep.AspNetUsers)
-            //.FirstOrDefault(x => x.Id == id);
-            
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             return RepoContext.Students.Where(x => x.UserId == id);
 
             

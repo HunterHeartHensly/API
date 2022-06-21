@@ -22,6 +22,15 @@ namespace WebUI.Controllers.StudentManagement
         [Route("GetStudents")]
         public IActionResult GetStudents()
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             var student = _studentRepository.GetAllStudent();
             return Ok(student);
         }
@@ -31,6 +40,15 @@ namespace WebUI.Controllers.StudentManagement
         [Route("GetStudentById/{id}")]
         public IActionResult GetStudentById(string id)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             var student = _studentRepository.GetStudentById(id);
             return Ok(student);
         }
@@ -40,6 +58,15 @@ namespace WebUI.Controllers.StudentManagement
         [Route("EditStudent/{id}")]
         public IActionResult EditStudent(string id, EditStudentDto editStudentDto)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             _studentRepository.EditStudent(id, editStudentDto);
             return Ok();
         }
@@ -50,6 +77,15 @@ namespace WebUI.Controllers.StudentManagement
         [Route("SpecificStudent/{id}")]
         public IActionResult SpecificStudent(string id)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
+
             var student = _studentRepository.GetSpecificStudent(id);
             return Ok(student);
         }
@@ -59,6 +95,14 @@ namespace WebUI.Controllers.StudentManagement
         [HttpPost("Sorting")]
         public IActionResult Sorting(SortModel sortBy)
         {
+            //int x = 10;
+            //int y =20;
+            //int z = x+y;
+            //console.log(z);
+
+
+            //int z1 = x/y;
+            //console.log(z1);
             var sort = _studentRepository.GetSorted(sortBy);
             return Ok(sort);
         }
