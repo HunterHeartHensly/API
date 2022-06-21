@@ -33,12 +33,11 @@ namespace Persistance.Repository.StudentManagement
             //int x = 10;
             //int y =20;
             //int z = x+y;
-            //console.log(z)
-
+            //console.log(z);
 
 
             //int z1 = x/y;
-            //console.log(z1)
+            //console.log(z1);
 
 
             return RepoContext.Students.ToList();
