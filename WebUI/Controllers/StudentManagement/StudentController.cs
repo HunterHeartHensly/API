@@ -17,7 +17,7 @@ namespace WebUI.Controllers.StudentManagement
             _studentRepository = studentRepository;
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles ="Admin")]
         [HttpGet]
         [Route("GetStudents")]
         public IActionResult GetStudents()
@@ -35,7 +35,7 @@ namespace WebUI.Controllers.StudentManagement
             return Ok(student);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("GetStudentById/{id}")]
         public IActionResult GetStudentById(string id)
@@ -53,7 +53,7 @@ namespace WebUI.Controllers.StudentManagement
             return Ok(student);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         [Route("EditStudent/{id}")]
         public IActionResult EditStudent(string id, EditStudentDto editStudentDto)
@@ -72,7 +72,7 @@ namespace WebUI.Controllers.StudentManagement
         }
 
 
-        //[Authorize(Roles = "Student")]
+        [Authorize(Roles ="Student")]
         [HttpGet]
         [Route("SpecificStudent/{id}")]
         public IActionResult SpecificStudent(string id)
@@ -91,7 +91,7 @@ namespace WebUI.Controllers.StudentManagement
         }
 
 
-        //[Authorize]
+        [Authorize]
         [HttpPost("Sorting")]
         public IActionResult Sorting(SortModel sortBy)
         {
