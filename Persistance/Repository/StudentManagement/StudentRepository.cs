@@ -30,15 +30,11 @@ namespace Persistance.Repository.StudentManagement
         
         public IEnumerable<StudentModel> GetAllStudent()
         {
-            
-
-
             return RepoContext.Students.ToList();
         }
 
         public StudentModel GetStudentById(string id)
         {
-           
 
             return RepoContext.Students.SingleOrDefault(x => x.Id == id);
         }
